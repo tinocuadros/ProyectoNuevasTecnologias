@@ -7,6 +7,6 @@ Route::get('/', function () {
 });
 
 Route::get('/saludo', function () {
-    return view('HolaMundo');
+    return view('login');
 });
 
