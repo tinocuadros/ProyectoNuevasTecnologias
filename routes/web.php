@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductoController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,3 +22,4 @@ Route::get('/Bienvenido', function () {
     return view('login');
 });
 
+Route::resource('productos', ProductoController::class);
