@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\UsuarioController;
 
 Route::get('/', function () {
     return view('Home');
@@ -23,3 +24,4 @@ Route::get('/Bienvenido', function () {
 });
 
 Route::resource('productos', ProductoController::class);
+Route::resource('usuarios', UsuarioController::class);
