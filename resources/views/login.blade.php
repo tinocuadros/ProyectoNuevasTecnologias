@@ -80,6 +80,7 @@
 
         <form action="{{ route('login.post') }}" method="POST" class="mt-3">
     
+            @csrf
 
             <div class="mb-3 text-start">
                 <label class="form-label">Correo</label>
@@ -93,13 +94,23 @@
 
             <button class="btn btn-success w-100 py-2 fw-semibold">Ingresar</button>
 
+            
             <!-- Mensajes -->
-            <div th:if="${param.error}" class="alert alert-danger mt-3">Usuario o contraseña incorrectos</div>
-            <div th:if="${param.logout}" class="alert alert-success mt-3">Sesión cerrada correctamente</div>
+@if($errors->any())
+    <div class="alert alert-danger mt-3">
+        {{ $errors->first() }}
+    </div>
+@endif
+
+@if(session('status'))
+    <div class="alert alert-success mt-3">
+        {{ session('status') }}
+    </div>
+@endif
 
             <!-- Links -->
             <div class="links mt-3">
-                <a th:href="@{/usuario/nuevo}" class="btn btn-link text-decoration-none">
+                <a th:href="{{url('')}}" class="btn btn-link text-decoration-none">
                     <i class="bi bi-person-plus"></i> Registrar nuevo usuario
                 </a>
                 <br>
