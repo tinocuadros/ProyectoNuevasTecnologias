@@ -20,7 +20,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 Route::get('/Bienvenido', function () {
-    return view('login');
+    return view('/login');
 });
 
 Route::resource('productos', ProductoController::class);
