@@ -31,7 +31,7 @@
                     Administración
                 </a>
                 <ul class="dropdown-menu dropdown-menu-custom">
-                    <li><a class="dropdown-item" href="#">Usuarios</a></li>
+                    <li><a class="dropdown-item" href="{{ route ('usuarios.index')}}">Usuarios</a></li>
                     <li><a class="dropdown-item" href="{{url('/perfiles')}}">Perfiles de Usuario</a></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
@@ -42,11 +42,8 @@
                     Módulos
                 </a>
                 <ul class="dropdown-menu  dropdown-menu-custom">
-                    <li><a class="dropdown-item" href="#">Historias Clinicas</a></li>
-                    <li><a class="dropdown-item" href="#">Clientes</a></li>
-                    <li><a class="dropdown-item" href="#">Mascotas</a></li>
-                    <li><a class="dropdown-item" href="#">Productos y Servicios</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="{{ route('productos.index')}}">Productos</a></li>
+                   
                 </ul>
                 </li>
                 
@@ -81,7 +78,7 @@
     </nav>
 
     <!-- 📦 Contenido dinámico -->
-    @yield('contenido')
+    @yield('content')
 
     <!-- Bootstrap JS (SOLO ESTE) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -22,9 +22,11 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
+       
+
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/Home');
+            return redirect()->intended('/');
         }
 
         return back()->withErrors([

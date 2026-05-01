@@ -110,7 +110,7 @@
 
             <!-- Links -->
             <div class="links mt-3">
-                <a th:href="{{url('')}}" class="btn btn-link text-decoration-none">
+                <a th:href="{{route('usuarios.create')}}" class="btn btn-link text-decoration-none">
                     <i class="bi bi-person-plus"></i> Registrar nuevo usuario
                 </a>
                 <br>

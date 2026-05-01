@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
-@section('contenido')
+@section('content')
     <h1>Hola desde Inicio 👋</h1>
 @endsection
