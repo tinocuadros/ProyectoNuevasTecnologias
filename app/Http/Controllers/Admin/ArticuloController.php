@@ -40,7 +40,7 @@ class ArticuloController extends Controller
             'codigo' => 'nullable|unique:articulos',
             'nombre' => 'required|unique:articulos',
             'descripcion' => 'nullable',
-            'precio' => 'required|numeric|min:0',
+            'precio_venta' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
             'stock_minimo' => 'required|integer|min:0',
             'ubicacion' => 'nullable'
