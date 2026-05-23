@@ -19,7 +19,25 @@
     RewriteRule ^ %1 [L,R=301]
 
     # Send Requests To Front Controller...
+<<<<<<< HEAD
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+=======
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Configurar MIME types para PDF
+<IfModule mod_mime.c>
+    AddType application/pdf .pdf
+</IfModule>
+
+# Configurar headers para PDF
+<FilesMatch "\.pdf$">
+    Header set Content-Type "application/pdf"
+    Header set X-Content-Type-Options "nosniff"
+</FilesMatch>
+>>>>>>> 47aa1f7fd04f263e86226a1b5e70f164cb6705a8

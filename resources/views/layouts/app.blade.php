@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
+=======
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+>>>>>>> 47aa1f7fd04f263e86226a1b5e70f164cb6705a8
     <title>Mi App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
@@ -15,7 +19,11 @@
             
             <a class="navbar-brand" href="{{ url('/')}}">
                 <div class="text-center">
+<<<<<<< HEAD
                     Inventario
+=======
+                    <img src="{{ asset('img/logo_new.png') }}" alt="" class="d-inline-block align-top" style="max-height: 40px; filter: brightness(0) invert(1);">
+>>>>>>> 47aa1f7fd04f263e86226a1b5e70f164cb6705a8
                 </div>
             </a>
                 <!-- 🔽 IZQUIERDA: Cuenta -->
@@ -31,9 +39,15 @@
                     Administración
                 </a>
                 <ul class="dropdown-menu dropdown-menu-custom">
+<<<<<<< HEAD
                     <li><a class="dropdown-item" href="{{ route ('usuarios.index')}}">Usuarios</a></li>
                     <li><a class="dropdown-item" href="{{url('/perfiles')}}">Perfiles de Usuario</a></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
+=======
+                    <li><a class="dropdown-item" href="{{url('/admin/usuarios')}}">Usuarios</a></li>
+                    <li><a class="dropdown-item" href="{{url('/perfiles')}}">Perfiles de Usuario</a></li>
+                    <li><a class="dropdown-item" href="{{url('/permisos')}}">Permisos</a></li>
+>>>>>>> 47aa1f7fd04f263e86226a1b5e70f164cb6705a8
                 </ul>
                 </li>
 
@@ -42,8 +56,15 @@
                     Módulos
                 </a>
                 <ul class="dropdown-menu  dropdown-menu-custom">
+<<<<<<< HEAD
                     <li><a class="dropdown-item" href="{{ route('productos.index')}}">Productos</a></li>
                    
+=======
+                    <li><a class="dropdown-item" href="{{url('/ventas')}}"">Facturacion</a></li>
+                    <li><a class="dropdown-item" href="{{url('/clientes')}}">Clientes</a></li>
+                    <li><a class="dropdown-item" href="{{url('/proveedores')}}">Proveedores</a></li>
+                    <li><a class="dropdown-item" href="{{url('/inventario')}}">Inventario</a></li>
+>>>>>>> 47aa1f7fd04f263e86226a1b5e70f164cb6705a8
                 </ul>
                 </li>
                 
@@ -78,7 +99,11 @@
     </nav>
 
     <!-- 📦 Contenido dinámico -->
+<<<<<<< HEAD
     @yield('content')
+=======
+    @yield('contenido')
+>>>>>>> 47aa1f7fd04f263e86226a1b5e70f164cb6705a8
 
     <!-- Bootstrap JS (SOLO ESTE) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
